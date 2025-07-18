@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <script src="{% static 'js/main_page.js' %}"></script>
+</head>
+<body>
+    <h1>
+        Здравствуйте, {{ user.last_name }} {{ user.first_name }}
+    </h1>
+    <div class="content-container">
+    </div>
+</body>
+</html>

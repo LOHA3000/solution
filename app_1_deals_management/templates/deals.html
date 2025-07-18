@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'css/deals.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <script src="{% static 'js/deals.js' %}"></script>
+</head>
+<body>
+    <h2>Последние активные сделки</h2>
+    <table>
+        <tr>
+            <th>№</th>
+            {% for h in headers %}
+            <th>
+                {{ h }}
+            </th>
+            {% endfor %}
+        </tr>
+        {% for ind, t in list %}
+        <tr>
+            <td>{{ ind }}</td>
+            {% for key, value in t.params %}
+            <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="create-new-btn" onclick="create_new_deal_form();">
+        Создать новую
+    </div>
+</body>
+</html>

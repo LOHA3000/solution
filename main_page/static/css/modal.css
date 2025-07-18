@@ -1,0 +1,94 @@
+/* формируем фон для модального окна */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* темный фон при открытии модалки должен быть на всю страницу */
+    position: fixed;
+    z-index: 1; /* поверх всех элементов */
+    left: 0;
+    top: 0;
+    width: 100vw; /* полная ширина */
+    height: 100vh; /* полная высота */
+    background-color: rgba(0,0,0,0.4); /* цвет фона - прозрачный черный */
+
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    &.opened {
+        opacity: 1;
+    }
+
+    /* само модальное окно с контентом */
+    .modal-content {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        padding-right: 35px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .close-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22px;
+        aspect-ratio: 1 / 1;
+
+        cursor: pointer;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+
+        &:hover {
+            .leftright {
+                transform: rotate(-45deg);
+                background-color: #000;
+            }
+
+            .rightleft {
+                transform: rotate(45deg);
+                background-color: #000;
+            }
+        }
+
+        .leftright, .rightleft {
+            height: 4px;
+            width: 100%;
+            position: absolute;
+            background-color: #a3a3a3;
+            border-radius: 2px;
+            transition: transform, background-color .2s, .2s ease-in-out;
+        }
+
+        .leftright {
+            transform: rotate(45deg);
+        }
+
+        .rightleft {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+
+    th {
+        text-align: left;
+    }
+
+    input, select {
+        font-size: inherit;
+        font-family: inherit;
+        width: -webkit-fill-available;
+        width: -moz-available;
+        width: stretch;
+    }
+}
