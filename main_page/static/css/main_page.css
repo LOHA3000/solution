@@ -1,0 +1,20 @@
+.tabs {
+    display: flex;
+    align-items: stretch;
+    border: #000 solid 1px;
+    border-radius: 5px;
+
+    input {
+        display: none;
+
+        &:checked + label {
+            background: #000;
+            color: #fff;
+            transition: 0.5s
+        }
+    }
+
+    label {
+        padding: 10px 20px;
+    }
+}

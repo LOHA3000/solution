@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .qr-gallery {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-gallery">
+    {% for img in b64_images %}
+        <img src="data:image/png;base64,{{ img }}">
+    {% endfor %}
+    </div>
+</body>
+</html>

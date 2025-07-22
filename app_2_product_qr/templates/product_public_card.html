@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        img {
+            height: 150px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>{{head_product.name}}</div>
+    <div>{{head_product.description}}</div>
+    <div class="gallery">
+        {% for url in head_product.image_urls %}
+        <img src="{{ url }}">
+        {% endfor %}
+    </div>
+    <div>{{variation.name}}</div>
+    <div>{{variation.description}}</div>
+    <div>{{variation.price_str}}</div>
+    <div class="gallery">
+        {% for url in variation.image_urls %}
+        <img src="{{ url }}">
+        {% endfor %}
+    </div>
+</body>
+</html>

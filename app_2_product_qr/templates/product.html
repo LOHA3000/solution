@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .gallery {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>{{product.name}}</div>
+    <div>{{product.description}}</div>
+    <div>{{product.price_str}}</div>
+    <div class="gallery">
+        {% for url in product.image_urls %}
+        <img src="{{ url }}">
+        {% endfor %}
+    </div>
+</body>
+</html>

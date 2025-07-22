@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'css/product_qr.css' %}">
+    <script src="{% static 'js/product_qr.js' %}"></script>
+</head>
+<body>
+    <h2>Генерация QR кода для публичного доступа</h2>
+    <form onsubmit="return false;">
+        <table>
+            <tr>
+                <th>ID</th>
+                <td>
+                    <input type="number" name="id" oninput="autocomplete_id();">
+                </td>
+            </tr>
+            <tr>
+                <th>Название</th>
+                <td>
+                    <input type="text" list="name" name="title" oninput="autocomplete_title();">
+                    <datalist id="name"></datalist>
+                </td>
+            </tr>
+            <tr>
+                <th>Вариация</th>
+                <td>
+                    <select name="variation" onchange="select_variation();"></select>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Создать" onclick="create_qr();">
+    </form>
+    <div class="head-product"><!-- тут будет головной товар --></div>
+    <div class="product-variation"><!-- тут будет вариация --></div>
+    <div class="created-qr"><!-- тут будут уже созданные QR --></div>
+</body>
+</html>
