@@ -1,5 +1,13 @@
-window.onload = load_last_10_deals;
+window.onload = load_active_tab;
 
+function load_active_tab() {
+    let active_tab = document.querySelector('input[name="tab"]:checked').getAttribute('id');
+    const main_page = {
+            deals: load_last_10_deals,
+            ['product-qr']: product_qr,
+            employees: employees_table};
+    main_page[active_tab]();
+}
 
 function reload_iframe_container(src) {
     let container = document.querySelector('.content-container');
@@ -31,4 +39,8 @@ function load_last_10_deals() {
 
 function product_qr() {
     reload_iframe_container('/product_qr/')
+}
+
+function employees_table() {
+    reload_iframe_container('/employees/')
 }

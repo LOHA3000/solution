@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'main_page',
     'app_1_deals_management',
     'app_2_product_qr',
+    'app_3_employees',
 
     'integration_utils.bitrix24',
     'integration_utils.its_utils.app_gitpull',

@@ -5,16 +5,19 @@
     <link rel="stylesheet" href="{% static 'css/main_page.css' %}">
     <link rel="stylesheet" href="{% static 'css/modal.css' %}">
     <script src="{% static 'js/main_page.js' %}"></script>
+    <script src="//api.bitrix24.com/api/v1/"></script>
 </head>
 <body>
     <h1>
         Здравствуйте, {{ user.last_name }} {{ user.first_name }}
     </h1>
     <div class="tabs">
-        <input type="radio" id="deals" name="tab" checked onclick="load_last_10_deals();">
+        <input type="radio" id="deals" name="tab" onclick="load_active_tab();" checked>
         <label for="deals">Сделки</label>
-        <input type="radio" id="product-qr" name="tab" onclick="product_qr();">
+        <input type="radio" id="product-qr" name="tab" onclick="load_active_tab();">
         <label for="product-qr">QR Товар</label>
+        <input type="radio" id="employees" name="tab" onclick="load_active_tab();">
+        <label for="employees">Сотрудники</label>
     </div>
     <div class="content-container">
     </div>

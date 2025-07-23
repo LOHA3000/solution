@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <script src="{% static 'js/employees.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/employees.css' %}">
+</head>
+<body>
+    <h1>Таблица сотрудников</h1>
+    <table>
+        <tr>
+            <th>Фото</th>
+            <th>Имя</th>
+            <th>Отдел</th>
+            <th>Руководитель отдела</th>
+            <th>Звонки за последние сутки</th>
+        </tr>
+        <!-- тут будут строчки с сотрудниками -->
+    </table>
+    <div class="create-new-btn" onclick="create_new_call_form();">
+        Создать новый звонок
+    </div>
+</body>
+</html>
