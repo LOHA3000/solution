@@ -1,0 +1,27 @@
+#map {
+    width: 800px;
+    height: 400px;
+}
+
+.marker-class {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    gap: 2px;
+
+    font-weight: bold;
+
+    transform: translate(-50%, -50%);
+
+    align-items: center;
+
+    img {
+        height: 40px;
+    }
+
+    div {
+        padding: 2px 10px;
+        background: #ffffffcc;
+        border-radius: 5px;
+    }
+}

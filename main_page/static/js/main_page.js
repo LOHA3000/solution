@@ -5,7 +5,9 @@ function load_active_tab() {
     const main_page = {
             deals: load_last_10_deals,
             ['product-qr']: product_qr,
-            employees: employees_table};
+            employees: employees_table,
+            map: company_map,
+            };
     main_page[active_tab]();
 }
 
@@ -43,4 +45,8 @@ function product_qr() {
 
 function employees_table() {
     reload_iframe_container('/employees/')
+}
+
+function company_map() {
+    reload_iframe_container('/map/')
 }
