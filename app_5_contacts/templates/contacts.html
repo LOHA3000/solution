@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+    <script src="{% static 'js/contacts.js' %}"></script>
+</head>
+<body>
+    <h1>Импорт и экспорт контактов</h1>
+    <h2>Импорт</h2>
+    <form onsubmit="return false;" name="import">
+        <table>
+            <tr>
+                <td><label for="import-file-format">Формат файла</label></td>
+                <td>
+                    <select id="import-file-format" name="file_format" onchange="changeAvailableImportFormats();">
+                        <option value="csv">CSV</option>
+                        <option value="xlsx">XLSX</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="file" name="file" accept="text/csv">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Импортировать" onclick="import_contacts()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h2>Экспорт</h2>
+    <form onsubmit="return false;" name="export">
+        <table>
+            <tr>
+                <td><label for="export-file-format">Формат файла</label></td>
+                <td>
+                    <select id="export-file-format" name="file_format">
+                        <option value="csv">CSV</option>
+                        <option value="xlsx">XLSX</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Экспортировать" onclick="export_contacts()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

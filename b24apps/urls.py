@@ -26,4 +26,5 @@ urlpatterns = [
     path('product_qr/', include('app_2_product_qr.urls')),
     path('employees/', include('app_3_employees.urls')),
     path('map/', include('app_4_company_map.urls')),
+    path('contacts/', include('app_5_contacts.urls')),
 ]

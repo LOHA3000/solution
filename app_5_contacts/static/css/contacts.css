@@ -1,0 +1,24 @@
+form {
+    font-size: 18px;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+
+    th {
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    input, select {
+        font-size: inherit;
+        font-family: inherit;
+        width: -webkit-fill-available;
+        width: -moz-available;
+        width: stretch;
+    }
+}
+
+table {
+    width: 100vw;
+}

@@ -7,6 +7,7 @@ function load_active_tab() {
             ['product-qr']: product_qr,
             employees: employees_table,
             map: company_map,
+            contacts: contacts,
             };
     main_page[active_tab]();
 }
@@ -49,4 +50,8 @@ function employees_table() {
 
 function company_map() {
     reload_iframe_container('/map/')
+}
+
+function contacts() {
+    reload_iframe_container('/contacts/')
 }

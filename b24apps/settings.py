@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'app_2_product_qr',
     'app_3_employees',
     'app_4_company_map',
+    'app_5_contacts',
 
     'integration_utils.bitrix24',
     'integration_utils.its_utils.app_gitpull',
